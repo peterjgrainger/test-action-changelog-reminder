@@ -1,3 +1,3 @@
 # test-action-changelog-reminder
 
-trigger updat
+trigger updated
