@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: peterjgrainger/test-action@version-v1
+    - uses: peterjgrainger/test-action@release-v1
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
