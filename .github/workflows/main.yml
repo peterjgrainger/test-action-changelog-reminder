@@ -1,14 +1,13 @@
-name: CI
-
-on: [pull_request]
-
+on: pull_request
+name: Changelog Reminder
 jobs:
-  build:
-
+  remind:
+    name: Changelog Reminder
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: peterjgrainger/test-action@release-v1
-      env: 
+    - uses: actions/checkout@master
+    - name: Changelog Reminder
+      uses: peterjgrainger/action-changelog-reminder@1.0
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
