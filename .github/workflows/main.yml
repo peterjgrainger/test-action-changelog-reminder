@@ -1,14 +1,15 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
-
+  create-branch:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: peterjgrainger/test-action@master
+    - uses: peterjgrainger/action-create-branch@master
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
