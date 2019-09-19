@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: peterjgrainger/action-create-branch@master
+      with:
+        branch: release-note-branch
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
