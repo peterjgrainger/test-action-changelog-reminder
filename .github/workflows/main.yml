@@ -1,17 +1,16 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
-  create-branch:
+  reminder:
     runs-on: ubuntu-latest
     steps:
-    - uses: peterjgrainger/action-create-branch@master
+    - uses: actions/checkout@master
+    - name: Changelog Reminder
+      uses: peterjgrainger/action-changelog-reminder@v1.1.1
       with:
-        branch: release-note-branch
-      env: 
+        changelog_regex: '/change_log\/.*\/*.yml'
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
