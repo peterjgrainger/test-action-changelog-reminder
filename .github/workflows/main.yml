@@ -8,9 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Changelog Reminder
-      uses: peterjgrainger/action-changelog-reminder@v1.1.1
+      uses: peterjgrainger/action-changelog-reminder@custom-message
       with:
         changelog_regex: '/change_log\/.*\/*.yml'
+        customPrMessage: 'w00t custom PR'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
