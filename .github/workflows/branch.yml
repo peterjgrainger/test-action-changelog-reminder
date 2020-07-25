@@ -1,5 +1,12 @@
-uses: peterjgrainger/action-create-branch@v1.0.0
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-with:
-  branch: 'release-notes'
+name: "PR Checks"
+on: [pull_request, push]
+
+jobs:
+  check_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peterjgrainger/action-create-branch@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: 'release-notes'
