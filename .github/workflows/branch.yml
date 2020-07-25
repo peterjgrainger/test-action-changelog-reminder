@@ -5,8 +5,8 @@ jobs:
   check_pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: peterjgrainger/action-create-branch@v1.0.0
+      - uses: peterjgrainger/action-create-branch@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: 'release-notes'
+          branch: 'release-pg'
