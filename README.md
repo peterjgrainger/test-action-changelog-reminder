@@ -1,3 +1,2 @@
 # test-action-changelog-reminder
-
-trigger updated
+test pr
