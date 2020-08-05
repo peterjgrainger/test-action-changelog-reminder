@@ -1,17 +1,13 @@
 name: CI
 
 on: pull_request
-
 jobs:
   reminder:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - name: Changelog Reminder
-      uses: peterjgrainger/action-changelog-reminder@custom-message
-      with:
-        changelog_regex: '/change_log\/.*\/*.yml'
-        customPrMessage: 'w00t custom PR'
+      uses: peterjgrainger/action-changelog-reminder@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
