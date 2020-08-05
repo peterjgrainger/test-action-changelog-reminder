@@ -8,8 +8,6 @@ jobs:
     - uses: actions/checkout@main
     - name: Changelog Reminder
       uses: peterjgrainger/action-changelog-reminder@master
-      with:
-        customPrMessage: 'w00t custom PR'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
