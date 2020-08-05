@@ -9,7 +9,6 @@ jobs:
     - name: Changelog Reminder
       uses: peterjgrainger/action-changelog-reminder@master
       with:
-        changelog_regex: '/change_log\/.*\/*.yml'
         customPrMessage: 'w00t custom PR'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
